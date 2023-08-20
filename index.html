@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <nav>
         Enter the Contest for the Vacation of a Lifetime
@@ -14,15 +16,20 @@
         <h2>Vacation Contest Sign-Up Form</h2>
         <form method="GET" action="results.html">
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname" required>
-                <label for="lastname">Your Last Name</label>
-                <input type="text" id="lastname" name="lastname" required>
+                <label for="firstname">Your First Name<span style="color:red">*</span></label>
+                <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35" required>
+                <label for="lastname">Your Last Name<span style="color:red">*</span></label>
+                <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required>
+                <label for="age">Your Age</label>
+                <input type="number" name="age" id="age" min="21" max="120">
+                <label for="pwd">Your Secret Code<span style="color:red">*</span></label>
+                <input type="password" id="pwd" name="pwd" pattern="[A-Za-z0-9]{6}" required>
+
             </div>
             <fieldset>
                 <legend>Your Contact Info</legend>
                 <div>
-                    <label for="email">Your Email</label>
+                    <label for="email">Your Email <span style="color:red">*</span></label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div>
@@ -86,7 +93,7 @@
                         <option value="WY">Wyoming</option>
                     </datalist>
                     <label for="zip">Your Zipcode</label>
-                    <input type="text" id="zip" name="zip">
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US ZIP code">
                 </div>
             </fieldset>
 
@@ -94,19 +101,19 @@
                 <legend>Your Preferences</legend>
                 <h3>Choose your location</h3>
                 <div>
-                    <input type="radio" id="aruba" name="location" value="Aruba" checked> 
+                    <input type="radio" id="aruba" name="location" value="Aruba" checked>
                     <label for="aruba">Aruba</label>
                 </div>
                 <div>
-                    <input type="radio" id="japan" name="location" value="Japan"> 
+                    <input type="radio" id="japan" name="location" value="Japan">
                     <label for="japan">Japan</label>
                 </div>
                 <div>
-                    <input type="radio" id="reykjavik" name="location" value="Reykjavik"> 
+                    <input type="radio" id="reykjavik" name="location" value="Reykjavik">
                     <label for="reykjavik">Reykjavik</label>
                 </div>
                 <div>
-                    <input type="radio" id="new-zealand" name="location" value="New Zealand"> 
+                    <input type="radio" id="new-zealand" name="location" value="New Zealand">
                     <label for="new-zealand">New Zealand</label>
                 </div>
                 <div>
@@ -115,29 +122,31 @@
                 </div>
                 <h3>Please select any add-ons you'd like:</h3>
                 <div>
-                    <input type="checkbox" id="sauna" name="extras" value="Sauna Access" checked> 
+                    <input type="checkbox" id="sauna" name="extras" value="Sauna Access" checked>
                     <label for="sauna">Sauna Access</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="hottub" name="extras" value="Hot Tub"> 
+                    <input type="checkbox" id="hottub" name="extras" value="Hot Tub">
                     <label for="hottub">In-Room Hot Tub</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="ocean" name="extras" value="Ocean View"> 
+                    <input type="checkbox" id="ocean" name="extras" value="Ocean View">
                     <label for="ocean">Ocean View</label>
                 </div>
                 <div>
-                    <input type="checkbox" id="drinks" name="extras" value="Drinks Package"> 
+                    <input type="checkbox" id="drinks" name="extras" value="Drinks Package">
                     <label for="drinks">All-inclusive Drinks Package</label>
                 </div>
             </fieldset>
-            
+
             <input type="submit" value="Enter the Contest!">
         </form>
     </main>
     <footer>
         <h2>Resource Attributions</h2>
-        <p>All images provided for free use via <a href="https://unsplash.com/">Unsplash.com</a> whose generous <a href="https://unsplash.com/license">license details can be found here</a>.</p>
+        <p>All images provided for free use via <a href="https://unsplash.com/">Unsplash.com</a> whose generous <a
+                href="https://unsplash.com/license">license details can be found here</a>.</p>
     </footer>
 </body>
+
 </html>
